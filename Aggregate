@@ -1,0 +1,26 @@
+interface Aggregate {     
+public Iterator createIterator(); 
+}
+
+class MovieListAggregate implements Aggregate {     
+private Movie[] list = new Movie[20];     
+private int numberOfStock; 
+ 
+    @Override     
+    public Iterator createIterator() {         
+    return new MovieListIterator(this);     
+    } 
+ 
+    public void add(Movie movie) {         
+    list[numberOfStock] = movi;         
+    numberOfStock += 1;     
+    } 
+ 
+    public Object getAt(int number) {         
+    return list[number];     
+    } 
+ 
+    public int getNumberOfStock() {         
+    return numberOfStock;     
+    }
+    }
